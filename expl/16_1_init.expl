@@ -1,0 +1,48 @@
+decl
+	int a[100];
+enddecl
+
+int main() {
+	decl
+		int temp1, temp2, temp3;
+		int n, i, j, swap, w,a;
+		str str1;
+	enddecl
+
+	begin
+		str1 = "Enter n";
+		temp1 = exposcall("Write", -2, str1);
+		temp2 = exposcall("Read", -1, n);
+                str1="Enter arr";
+                temp1=exposcall("Write",-2,str1);
+		i = 0;
+		while(i < n) do
+			temp3 = exposcall("Read", -1, a);
+			a[i]=a;
+			i = i+1;
+		endwhile;
+               
+		i = 0;
+		while(i < n) do
+                j = i+1;
+                        while(j < n) do
+                                if(a[i] > a[j]) then
+                                        swap= a[i];
+                                        a[i] = a[j];
+                                        a[j] = swap;
+                                endif;
+                                j = j+1;
+                        endwhile;
+                i = i+1;
+                endwhile;
+                str1="Sorted arr";
+                temp1=exposcall("Write",-2,str1);
+                i = 0;
+                while(i < n) do
+                        a=a[i];
+                        w = exposcall("Write", -2, a);
+                        i = i+1;
+                endwhile;
+                return 0;
+        end
+}

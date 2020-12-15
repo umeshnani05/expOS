@@ -1,0 +1,29 @@
+int main()
+{
+decl
+	int temp,num,s,count;
+enddecl
+begin
+	num=1;
+	while(num<=100)do
+		s=1;
+		count=0;
+		while(s<=num)do
+		if((num%s)==0)then
+		count=count+1;
+		endif;
+		s=s+1;
+		endwhile;
+		if(count==2)then
+		temp=exposcall("Write",-2,num);
+		endif;
+		num=num+1;
+	endwhile;
+	return 0;
+end
+}
+
+
+
+
+		
