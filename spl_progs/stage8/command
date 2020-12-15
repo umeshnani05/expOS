@@ -1,0 +1,8 @@
+stage8:
+theory:
+load --int=timer $HOME/myexpos/spl/spl_progs/stage8/sample_timer.xsm
+load --os $HOME/myexpos/spl/spl_progs/stage8/osstartup8_1.xsm
+load --init $HOME/myexpos/expl/expl_progs/8_1.xsm
+cd $HOME/myexpos/xsm
+./xsm --timer 2
+
