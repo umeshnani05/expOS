@@ -1,0 +1,55 @@
+alias functionNum R1;
+alias currentPID R2;
+alias word R3;
+if(functionNum == 3) then
+	backup;			
+        R1 = 8;			
+	R2 = currentPID;	
+        call MOD_0;		
+	restore;
+        print word;		
+        backup;
+        R1 = 9;			
+	R2 = currentPID;
+        call MOD_0;
+        restore;	
+	return;
+endif;
+if(functionNum == 4) then
+
+	backup;					
+	R1 = 8;					
+	R2 = currentPID;
+       call MOD_0;				
+       restore;
+       read;
+       [PROCESS_TABLE + 16*currentPID + 4] = WAIT_TERMINAL;	
+       backup;
+       call MOD_5;
+       restore;
+       [[PTBR + 2*(word/512)]*512 + word%512] = [PROCESS_TABLE + currentPID*16 + 8]; 
+	
+endif;
+if(functionNum==2)then         //diskload
+	alias page_num R3;
+	alias block_num R4;
+	backup;
+	R1=ACQUIRE_DISK;
+	R2=currentPID;
+	call MOD_0;
+	restore;
+	[DISK_STATUS_TABLE+0]=1;
+	[DISK_STATUS_TABLE+1]=0;
+	[DISK_STATUS_TABLE+2]=page_num;
+	[DISK_STATUS_TABLE+3]=block_num;
+	[DISK_STATUS_TABLE+4]=currentPID;
+	load(page_num,block_num);
+	[PROCESS_TABLE+currentPID*16+4]=WAIT_DISK;
+	backup;
+	call MOD_5;
+	restore;
+endif;
+	
+return;
+
+
