@@ -1,0 +1,13 @@
+stage11:
+theory:
+load --init $HOME/myexpos/expl/expl_progs/11.xsm
+load --os $HOME/myexpos/spl/spl_progs/stage11/osstartup11_1.xsm
+load --int=7 $HOME/myexpos/spl/spl_progs/stage11/sample_int7.xsm
+assgn1:
+load --init $HOME/myexpos/expl/expl_progs/11_1.xsm
+cd $HOME/myexpos/xsm
+./xsm --timer 0
+assgn2:
+load --init $HOME/myexpos/expl/expl_progs/11_2.xsm
+cd $HOME/myexpos/xsm
+./xsm --timer 0
