@@ -1,0 +1,34 @@
+alias functionNum R1;
+alias currentPID R2;
+alias word R3;
+if(functionNum == 3) then
+	backup;			
+        R1 = 8;			
+	R2 = currentPID;	
+        call MOD_0;		
+	restore;
+        print word;		
+        backup;
+        R1 = 9;			
+	R2 = currentPID;
+        call MOD_0;
+        restore;	
+	return;
+endif;
+if(functionNum == 4) then
+
+	backup;					
+	R1 = 8;					
+	R2 = currentPID;
+       call MOD_0;				
+       restore;
+       read;
+       [PROCESS_TABLE + 16*currentPID + 4] = WAIT_TERMINAL;	
+       backup;
+       call MOD_5;
+       restore;
+       [[PTBR + 2*(word/512)]*512 + word%512] = [PROCESS_TABLE + currentPID*16 + 8]; 
+	
+endif;
+return;
+
