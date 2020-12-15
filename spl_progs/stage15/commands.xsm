@@ -1,0 +1,13 @@
+stage15:
+load --module 7 $HOME/myexpos/spl/spl_progs/stage15/stage15_boot.xsm
+load --module 0 $HOME/myexpos/spl/spl_progs/stage15/stage15_mod0.xsm
+load --module 4 $HOME/myexpos/spl/spl_progs/stage15/stage15_mod4.xsm
+load --int=7 $HOME/myexpos/spl/spl_progs/stage15/stage15_int7.xsm
+load --int=timer $HOME/myexpos/spl/spl_progs/stage15/stage15_timer.xsm
+load --module 5 $HOME/myexpos/spl/spl_progs/stage15/stage15_mod5.xsm
+load --idle $HOME/myexpos/expl/expl_progs/15_1_idle.xsm
+load --init $HOME/myexpos/expl/expl_progs/15_1.xsm
+theory2:(even,odd,idle)
+load --module 7 $HOME/myexpos/spl/spl_progs/stage15/stage15_boot2.xsm
+
+
