@@ -1,0 +1,5 @@
+stage3:
+theory:
+load --os $HOME/myexpos/spl/spl_progs/stage4/oddnos.xsm
+assgn1:
+load --os $HOME/myexpos/spl/spl_progs/stage4/assgn1.xsm
