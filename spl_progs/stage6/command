@@ -1,0 +1,9 @@
+stage6:
+assgn1:
+load --init $HOME/myexpos/expl/expl_progs/6_1.xsm
+load --int=10 $HOME/myexpos/spl/spl_progs/stage6/int10.xsm
+load --exhandler $HOME/myexpos/spl/spl_progs/stage6/int10.xsm
+load --os $HOME/myexpos/spl/spl_progs/stage6/osstartup6_1.xsm
+cd $HOME/myexpos/xsm
+./xsm --debug --timer 0
+
