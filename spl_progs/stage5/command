@@ -1,0 +1,8 @@
+stage5:
+theory5:
+load --os $HOME/myexpos/spl/spl_progs/stage4/assgn1.xsm
+cd $HOME/myexpos/xsm
+./xsm --debug
+r
+c
+
