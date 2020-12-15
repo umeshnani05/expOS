@@ -1,0 +1,8 @@
+stage10:
+assgn1:
+load --init $HOME/myexpos/expl/expl_progs/10_1.xsm
+load --os $HOME/myexpos/spl/spl_progs/stage10/osstartup10_1.xsm
+load --int=7 $HOME/myexpos/spl/spl_progs/stage10/sample_int7.xsm
+cd $HOME/myexpos/xsm
+./xsm --timer 40
+
