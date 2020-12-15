@@ -1,0 +1,23 @@
+alias current_pid R0;
+alias current_processtable R1;
+alias counter R2;
+current_pid=[SYSTEM_STATUS_TABLE+1];
+current_processtable=PROCESS_TABLE+current_pid*16;
+[current_processtable+9]=10;
+[current_processtable+13]=SP;
+[current_processtable+4]=TERMINATED;
+SP=[current_processtable+11]*512;
+counter=1;
+while(counter<16)do
+	if([PROCESS_TABLE+counter*16+4]!=TERMINATED)then
+		break;
+	endif;
+	counter=counter+1;
+endwhile;
+if(counter==16)then
+	halt;
+else
+call MOD_5;
+endif;
+
+

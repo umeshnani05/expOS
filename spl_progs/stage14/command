@@ -1,0 +1,21 @@
+stage14:
+Theory:
+cd $HOME/myexpos/xfs-interface
+./xfs-interface
+load --os $HOME/myexpos/spl/spl_progs/stage14/osstartup_14.xsm
+load --int=timer $HOME/myexpos/spl/spl_progs/stage14/sample_timer_14.xsm
+load --module 7 $HOME/myexpos/spl/spl_progs/stage14/boot_14.xsm
+load --module 5 $HOME/myexpos/spl/spl_progs/stage14/MOD_5.xsm
+load --int=10 $HOME/myexpos/spl/spl_progs/stage14/MOD_10.xsm
+load --idle $HOME/myexpos/expl/expl_progs/14_1.xsm
+load --init $HOME/myexpos/expl/expl_progs/14_1_idle.xsm
+load --int=7 $HOME/myexpos/spl/spl_progs/stage10/sample_int7.xsm
+assgn1:
+load --os $HOME/myexpos/spl/spl_progs/stage14/osstartup_14.xsm
+load --int=timer $HOME/myexpos/spl/spl_progs/stage14/sample_timer_14.xsm
+load --module 7 $HOME/myexpos/spl/spl_progs/stage14/boot_14_1.xsm
+load --module 5 $HOME/myexpos/spl/spl_progs/stage14/MOD_5.xsm
+load --int=10 $HOME/myexpos/spl/spl_progs/stage14/MOD_10.xsm
+load --idle $HOME/myexpos/expl/expl_progs/14_1_idle.xsm
+load --init $HOME/myexpos/expl/expl_progs/14_1.xsm
+load --int=7 $HOME/myexpos/spl/spl_progs/stage10/sample_int7.xsm
