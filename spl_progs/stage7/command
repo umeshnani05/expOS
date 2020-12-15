@@ -1,0 +1,7 @@
+stage7:
+assgn1: 
+load --library $HOME/myexpos/expl/library.lib
+load --os $HOME/myexpos/spl/spl_progs/stage7/osstartup7_1.xsm
+load --init $HOME/myexpos/expl/expl_progs/7_1.xsm
+cd $HOME/myexpos/xsm
+cd $HOME/myexpos/xsm
