@@ -1,0 +1,7 @@
+stage9:
+assgn1:
+load --init $HOME/myexpos/expl/expl_progs/9_1.xsm
+load --os $HOME/myexpos/spl/spl_progs/stage9/osstartup9_1.xsm
+load --int=timer $HOME/myexpos/spl/spl_progs/stage9/sample_timer9_1.xsm
+ cd $HOME/myexpos/xsm
+./xsm --timer 20
